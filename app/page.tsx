@@ -1,10 +1,12 @@
 import Navbar from "@/components/Navbar/Navbar";
+import Footer from "@/components/Footer/Footer";
 
 const Home =()=> {
   return (
-    <div className="px-16">
+    <div>
       <Navbar />
       <div>This is my home page</div>
+      <Footer />
     </div>
   )
 }
