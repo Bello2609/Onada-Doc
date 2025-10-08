@@ -69,19 +69,19 @@ const Home =()=> {
                 height={40} 
                 alt="Avatar 2" />
               <Image 
-                src="/image.png" 
+                src="/image2.png" 
                 className="w-12 h-12 rounded-full border-2 border-white" 
                 width={40} 
                 height={40} 
                 alt="Avatar 2" />
               <Image 
-                src="/image.png" 
+                src="/image3.png" 
                 className="w-12 h-12 rounded-full border-2 border-white" 
                 width={40} 
                 height={40} 
                 alt="Avatar 3" />
               <Image 
-                src="/image.png" 
+                src="/image4.png" 
                 className="w-12 h-12 rounded-full border-2 border-white" 
                 width={40} 
                 height={40} 
@@ -99,6 +99,48 @@ const Home =()=> {
               <p className="text-[#2A2374] font-sans font-medium">“from client reviews”</p>
             </div>
           </div>  
+        </div>
+        <div className="flex flex-col items-center px-16 font-semibold text-4xl bg-[#183B560D] py-10">
+          <h4 className="text-[#1B1F3B]">Our Features</h4>
+          <div className="grid grid-cols-3 gap-16 w-fit mt-10">
+            <div className="flex flex-col items-center w-[300px] h-[248px] rounded-[20px] bg-[#fff] p-5 shadow-xl shadow-[#1B1F3B]/25">
+              <p className="flex items-center justify-center w-[92px] h-[92px] rounded-full bg-[#FFF0E9]">
+                <Image src="/Vector.png" alt="vector" width="29" height="32" />
+              </p>
+              <h5 className="font-sans font-semibold text-2xl my-5 text-[#2E2E2E]">Upload Letterhead</h5>
+              <p className="font-sans font-medium text-base text-[#5F5F5F] text-center w-[240px]">Add your custom branding with ease.</p>
+            </div>
+            <div className="flex flex-col items-center w-[300px] h-[248px] rounded-[20px] bg-[#fff] p-5 shadow-xl shadow-[#1B1F3B]/25">
+              <p className="flex items-center justify-center w-[92px] h-[92px] rounded-full bg-[#E9F6EE]">
+                <Image src="/ai.png" alt="vector" width="29" height="32" />
+              </p>
+              <h5 className="font-sans font-semibold text-2xl my-5 text-[#2E2E2E]">AI Letter Generator </h5>
+              <p className="font-sans font-medium text-base text-[#5F5F5F] text-center w-[240px]">Generate official letters in seconds.</p>
+            </div>
+            <div className="flex flex-col items-center w-[300px] h-[248px] rounded-[20px] bg-[#fff] p-5 shadow-xl shadow-[#1B1F3B]/25">
+              <p className="flex items-center justify-center w-[92px] h-[92px] rounded-full bg-[#EDFFFF]">
+                <Image src="/Group.png" alt="vector" width="29" height="32" />
+              </p>
+              <h5 className="font-sans font-semibold text-2xl my-5 text-[#2E2E2E]">E-sign & Approve </h5>
+              <p className="font-sans font-medium text-base text-[#5F5F5F] text-center w-[240px]">Get documents signed and approved faster</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-16 mt-10">
+              <div className="flex flex-col items-center w-[300px] h-[248px] rounded-[20px] bg-[#fff] p-5 shadow-xl shadow-[#1B1F3B]/25">
+                <p className="flex items-center justify-center w-[92px] h-[92px] rounded-full bg-[#FFF6DD]">
+                  <Image src="/Vector2.png" alt="vector" width="29" height="32" />
+                </p>
+                <h5 className="font-sans font-semibold text-2xl my-5 text-[#2E2E2E]">Export & Email </h5>
+                <p className="font-sans font-medium text-base text-[#5F5F5F] text-center w-[240px]">Send or download docs instantly.</p>
+              </div>
+              <div className="flex flex-col items-center w-[300px] h-[248px] rounded-[20px] bg-[#fff] p-5 shadow-xl shadow-[#1B1F3B]/25">
+                <p className="flex items-center justify-center w-[92px] h-[92px] rounded-full bg-[#9672FF]/26">
+                  <Image src="/lock.png" alt="vector" width="29" height="32" />
+                </p>
+                <h5 className="font-sans font-semibold text-2xl my-5 text-[#2E2E2E]"> Secure Vault </h5>
+                <p className="font-sans font-medium text-base text-[#5F5F5F] text-center w-[240px]">Store your files with military-grade safety.</p>
+              </div>
+            </div>
         </div>
       <Footer />
     </>
