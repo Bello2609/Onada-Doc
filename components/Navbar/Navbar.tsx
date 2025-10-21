@@ -1,10 +1,15 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { Work_Sans } from "next/font/google";
+
+const worksans = Work_Sans({
+    subsets: ["latin"]
+})
 const Navbar = ()=>{
     return(
         <>
-            <div className="flex justify-between items-center px-16">
+            <div className={`flex justify-between items-center px-16 ${worksans.className}`}>
                 <Image src="/onada.png" alt="onada docs" width={104} height={104} />
                 <nav className="flex justify-evenly font-sans font-medium text-sm text-[#000] w-[500px]">
                     <Link href="#home">Home</Link>

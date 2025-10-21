@@ -1,14 +1,26 @@
+"use client";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import { FaStar } from "react-icons/fa";
+import { Work_Sans } from "next/font/google";
+import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from "react-icons/md";
 
+
+const worksans = Work_Sans({
+    subsets: ["latin"]
+})
+
+const period = ["Monthly", "Yearly"];
 const Home =()=> {
+  const [active, setIsActive] = useState("Monthly");
   return (
     <>
       <Navbar />
         <div className="flex flex-col justify-center bg-[url('/bg.png')] w-full h-[945px] bg-cover overflow-x-hidden bg-center bg-no-repeat">
+        {/* banner started */}
           <div className="flex flex-col justify-center items-center">
             <div className="flex justify-between w-[500px] mb-10">
             <div className="flex flex-col">
@@ -100,6 +112,8 @@ const Home =()=> {
             </div>
           </div>  
         </div>
+        {/* banner ended */}
+        {/* our features started */}
         <div className="flex flex-col items-center px-16 font-semibold text-4xl bg-[#183B560D] py-10">
           <h4 className="text-[#1B1F3B]">Our Features</h4>
           <div className="grid grid-cols-3 gap-16 w-fit mt-10">
@@ -142,6 +156,126 @@ const Home =()=> {
               </div>
             </div>
         </div>
+        {/* our features ends */}
+        {/* offer started */}
+        <div className="flex flex-col items-center bg-[#183B560D] py-16">
+          <div className="flex flex-col items-center text-center">
+            <p className={`${worksans.className} font-semibold flex-wrap text-4xl text-[#1B1F3B] w-[648px]`}>We offer great <span className="text-[#FFC700]">price</span> plan for the OnadaDocs</p>
+          </div>
+          <div className="flex items-center justify-center font-semibold text-base bg-[#fff] w-[200px] h-[46px] rounded-[20px] my-10 shadow-xl shadow-[#183B5633]">
+            {
+              period.map(data=>(
+                <button key={data} type="button" onClick={()=> setIsActive(data)} className={`${active === data ? `bg-[#FFC700] text-[#fff]` : `text-[#627065]`}  cursor-pointer  w-[90px] h-[27px] rounded-[20px]`}>
+                  {data}
+                </button>
+              ))
+            }
+          </div>
+          <div className="grid grid-cols-4 gap-4 w-fit mt-10">
+            <div className="flex flex-col items-center w-[300px] h-[379px] bg-[#fff] p-5">
+              <h5 className="font-sans font-medium text-3xl my-5 text-[#0B2110]">Starter</h5>
+              <p className="font-sans font-normal text-base text-[#2E3630] text-center w-[235px]">Starter pack to help you to get started</p>
+              <h2 className="font-sans font-bold text-[#0B2110] text-4xl mt-16 mb-10">Free</h2>
+              <p className="flex items-center justify-center font-sans font-semibold text-[#0B2110] w-[138px] h-[43px] text-base border-1 border-[#0B2110] rounded-[10px]">Get Started</p>
+            </div>
+            <div className="flex flex-col w-[300px]">
+              <div className="flex items-center justify-center rounded-t-[10px] bg-[#349C4B] w-full h-[27px] mt-[-30px] font-semibold text-[#fff]">Recommended</div>
+              <div className="flex flex-col items-center w-[300px] h-[379px] p-5 bg-[#183B560D]">
+                <h5 className="font-sans font-medium text-3xl my-5 text-[#0B2110]">Pro</h5>
+                <p className="font-sans font-normal text-base text-[#2E3630] text-center w-[235px]">For small teams & freelancers Access AI letters, e-sign, vault & export tools.</p>
+                <div className="flex font-sans items-center  text-[#0B2110] mt-10 mb-10">
+                  <h4 className="font-bold text-4xl">$20&nbsp;</h4>
+                  <p className="font-normal text-base">/&nbsp;month</p>
+                </div>
+                <p className="flex items-center justify-center font-sans font-semibold text-[#fff] w-[138px] h-[43px] text-base bg-[#349C4B] rounded-[10px]">Get Started</p>
+              </div>
+            </div>
+            
+            <div className="flex flex-col items-center w-[300px] h-[379px] p-5 bg-[#fff] ">
+              <h5 className="font-sans font-medium text-3xl my-5 text-[#0B2110]">Business+</h5>
+              <p className="font-sans font-normal text-base text-[#2E3630] text-center w-[235px]">For growing teams & approvals Collaborate and manage departments easily.</p>
+              <div className="flex font-sans items-center  text-[#0B2110] mt-10 mb-10">
+                <h4 className="font-bold text-4xl">$100&nbsp;</h4>
+                <p className="font-normal text-base">/&nbsp;month</p>
+              </div>
+              <p className="flex items-center justify-center font-sans font-semibold text-[#fff] w-[138px] h-[43px] text-base bg-[#349C4B] rounded-[10px]">Get Started</p>
+            </div>
+            <div className="flex flex-col items-center w-[300px] h-[379px] bg-[#183B560D] p-5">
+              <h5 className="font-sans font-medium text-3xl my-5 text-[#0B2110]">Enterprise</h5>
+              <p className="font-sans font-normal text-base text-[#2E3630] text-center w-[235px]">For large teams needing security Custom integrations & priority support.</p>
+              <h2 className="font-sans font-bold text-[#0B2110] text-4xl mt-10 mb-10">Custom</h2>
+              <p className="flex items-center justify-center font-sans font-semibold text-[#0B2110] w-[138px] h-[43px] text-base border-1 border-[#0B2110] rounded-[10px]">Contact Sales</p>
+            </div>
+          </div>
+        </div>
+        {/* offers ended */}
+        {/* what our client are saying start */}
+        <div className="flex flex-col items-center bg-[#183B560D] py-16">
+          <p className="font-sans font-semibold text-4xl">What Our Clients Say About Us</p>
+          <div className="flex cursor-pointer ">
+            <p className="text-4xl text-[#525252]"><MdOutlineKeyboardArrowLeft /></p>
+            <p className="text-4xl text-[#525252]"><MdOutlineKeyboardArrowRight /></p>
+          </div>
+          <div className="grid grid-cols-3 gap-16 mt-16">
+            <div className="relative w-72 h-72 rotate-[30deg]">
+              {/* <!-- Bottom navy layer --> */}
+              <div className="absolute inset-0 bg-[#1b1d36] -translate-x-[10px] translate-y-[15px] rounded-[60px_90px_40px_80px/80px_70px_70px_100px]"></div>
+              {/* <!-- Top white layer --> */}
+              <div className="absolute inset-0 bg-white rounded-[60px_90px_40px_80px/80px_70px_70px_100px]">
+                <div className="flex flex-col items-center justify-center w-full rotate-[-30deg]">
+                  <Image src="/customer.png" alt="customer review" width="76" height="76" className="flex justify-center  mt-[-30px]" />
+                  <h4 className="font-sans font-bold text-[#525252] text-lg">Hannah Schmitt</h4>
+                  <p className="font-sans font-normal text-[#525252] text-xs mt-2 mb-4">Lead designer</p>
+                  <p className="flex flex-wrap w-[230px] font-sans text-xs text-[#525252]">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, 
+                    nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. 
+                    Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus 
+                    pellentesque enim 
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="relative w-72 h-72 rotate-[30deg]">
+              {/* <!-- Bottom navy layer --> */}
+              <div className="absolute inset-0 bg-[#FFC700] -translate-x-[10px] translate-y-[15px] rounded-[60px_90px_40px_80px/80px_70px_70px_100px]"></div>
+              {/* <!-- Top white layer --> */}
+              <div className="absolute inset-0 bg-white rounded-[60px_90px_40px_80px/80px_70px_70px_100px]">
+                <div className="flex flex-col items-center justify-center w-full rotate-[-30deg]">
+                  <Image src="/customer2.png" alt="customer review" width="102" height="102" className="flex justify-center  mt-[-40px]" />
+                  <h4 className="font-sans font-bold text-[#525252] text-lg">Hannah Schmitt</h4>
+                  <p className="font-sans font-normal text-[#525252] text-xs mt-2 mb-4">Lead designer</p>
+                  <p className="flex flex-wrap w-[230px] font-sans text-xs text-[#525252]">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, 
+                    nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. 
+                    Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus 
+                    pellentesque enim 
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="relative w-72 h-72 rotate-[30deg]">
+              {/* <!-- Bottom navy layer --> */}
+              <div className="absolute inset-0 bg-[#1b1d36] -translate-x-[10px] translate-y-[15px] rounded-[60px_90px_40px_80px/80px_70px_70px_100px]"></div>
+              {/* <!-- Top white layer --> */}
+              <div className="absolute inset-0 bg-white rounded-[60px_90px_40px_80px/80px_70px_70px_100px]">
+                <div className="flex flex-col items-center justify-center w-full rotate-[-30deg]">
+                  <Image src="/customer3.png" alt="customer review" width="76" height="76" className="flex justify-center  mt-[-30px]" />
+                  <h4 className="font-sans font-bold text-[#525252] text-lg">Hannah Schmitt</h4>
+                  <p className="font-sans font-normal text-[#525252] text-xs mt-2 mb-4">Lead designer</p>
+                  <p className="flex flex-wrap w-[230px] font-sans text-xs text-[#525252]">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, 
+                    nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. 
+                    Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus 
+                    pellentesque enim 
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+        {/* what our client are saying end */}
       <Footer />
     </>
   )
