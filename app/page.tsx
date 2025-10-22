@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/components/Navbar/Navbar";
@@ -16,6 +16,14 @@ const worksans = Work_Sans({
 const period = ["Monthly", "Yearly"];
 const Home =()=> {
   const [active, setIsActive] = useState("Monthly");
+   const hiddenFileInput = useRef(null);
+
+      const handleClick = ()=>{
+        hiddenFileInput.current.click();
+    }
+    const handleChange = (e: any)=>{
+        console.log(e.target.files[0]);
+    }
   return (
     <>
       <Navbar />
@@ -276,6 +284,28 @@ const Home =()=> {
 
         </div>
         {/* what our client are saying end */}
+        {/* upload doc here start */}
+        <div className="flex flex-col items-center bg-[#183B560D] py-10">
+            <h4 className="font-sans font-semibold text-4xl text-[#1B1F3B]">Upload your company logo</h4>
+            <p className="font-sans font-medium text-3xl text-[#686868] mt-5">Recommended size: 256x256px, PNG or JPG</p>
+            <div className="flex flex-col items-center  justify-center my-20 w-[882px] h-[256px] border-2 border-[#686868] rounded-md  border-dashed bg-[#fff]">
+              <p className="font-sans font-medium text-3xl text-[#16192F] mb-5" >Drag and drop a file here, or</p>
+              <label className="flex justify-center items-center font-normal text-3xl text-[#16192F] rounded-md w-[220px] h-[59px] flex items-center cursor-pointer border-2 border-[#16192F]" onClick={handleClick}>
+                  Browse
+              </label>
+              <input 
+                  type="file"  
+                  ref={hiddenFileInput}
+                  onChange={handleChange}
+                  accept="image/*" 
+                  name="image" 
+                  style={{ visibility: "hidden" }}  
+                  className="border-2 border-red-500 w-full" 
+              />
+            </div>
+            <button className="cursor-pointer w-[126px] h-[39px] bg-[#1B1F3B] font-sans font-semibold text-2xl rounded-[10px] text-[#fff]" type="button">Save</button>
+        </div>
+        {/* upload doc here ends */}
       <Footer />
     </>
   )
