@@ -16,10 +16,13 @@ const worksans = Work_Sans({
 const period = ["Monthly", "Yearly"];
 const Home =()=> {
   const [active, setIsActive] = useState("Monthly");
-   const hiddenFileInput = useRef(null);
+   const hiddenFileInput = useRef<HTMLInputElement>(null);
 
       const handleClick = ()=>{
-        hiddenFileInput.current.click();
+        if(hiddenFileInput.current){
+          hiddenFileInput.current.click();
+        }
+       
     }
     const handleChange = (e: any)=>{
         console.log(e.target.files[0]);
