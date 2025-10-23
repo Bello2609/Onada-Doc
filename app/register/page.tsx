@@ -1,12 +1,30 @@
+import Image from "next/image";
+import { MdArrowBackIosNew } from "react-icons/md";
+import FormInput from "@/components/FormInput/FormInput";
+import FormNumber from "@/components/FormNumber/FormNumber";
 const Register = ()=>{
     return(
         <>
         <div className="flex w-full h-[100vh]">
-            <div className="flex w-[60%] h-[653px] bg-[url('/Stroke.png')] bg-no-repeat ">
-
+            <div className="flex flex-col w-[60%] h-fit bg-[url('/Stroke.png')] bg-no-repeat bg-center bg-contain p-10">
+                <Image src="/onada.png" alt="onada docs" width={104} height={104} />
+                <div className="flex justify-between w-[300px] items-center">
+                    <p className="flex items-center justify-center bg-[#ECECEC] w-[30px] h-[30px] rounded-full"><MdArrowBackIosNew /></p>
+                    <p className="font-sans font-bold">Let's get you started</p>
+                </div>
+                <form className="flex justify-center mt-10 w-full">
+                    <div className="w-[400px]">
+                        <FormInput label="Full name" type="text" placeholder="Enter name" name="Full name" />
+                        <FormInput label="Email Address" type="email" placeholder="Email Address" name="email address" />
+                        <FormNumber label="Phone number" name="phone number" value="+2348069573501" onChange={()=>{console.log("hello")}} />
+                        <FormInput label="Create password" type="password" placeholder="******" name="password" />
+                        <FormInput label="Location(optional)" type="text" placeholder="select location" name="location" />
+                    </div>
+                    
+                </form>
             </div>
-            <div className="flex justify-center  items-center  w-[40%] h-[653px] bg-linear-to-br from-[#0f172a] from-10% via-[#312e1f] via-60% to-[#5a4a20] to-90%">
-                <h3 className="font-sans font-bold w-[300px] text-4xl text-[#fff] border-1 border-red-500">
+            <div className="flex justify-center  items-center  w-[40%] h-[800px] bg-linear-to-br from-[#0f172a] from-10% via-[#312e1f] via-60% to-[#5a4a20] to-90%">
+                <h3 className="font-sans font-bold w-[300px] text-4xl text-[#fff]">
                     “Powerful Letters. Effortless Collaboration. Sign up.”
                 </h3>
             </div>
