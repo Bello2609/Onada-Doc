@@ -17,7 +17,7 @@ const Navbar = ()=>{
                     <Link href="#pricing">Pricing Plans</Link>
                     <Link href="#testimony">Testimonial</Link>
                 </nav>
-                <Link href="/sign-up" className="flex justify-center items-center font-sans font-bold text-sm text-[#fff] !bg-[#1B1F3B] w-[194px] h-[53px] rounded-[10px]">
+                <Link href="/register" className="flex justify-center items-center font-sans font-bold text-sm text-[#fff] !bg-[#1B1F3B] w-[194px] h-[53px] rounded-[10px]">
                     Get Started Free
                 </Link>
             </div>

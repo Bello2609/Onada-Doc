@@ -73,10 +73,10 @@ const Home =()=> {
             </h1>
             <p className="font-sans font-medium text-center text-[#616161] my-10">Your Official Document Generator — Smart, Branded,<br /> Effortless.</p>
             <div className="flex justify-between  w-[500px]">
-              <Link href="/sign-up" className="flex justify-center items-center font-sans font-bold text-sm text-[#fff] !bg-[#1B1F3B] w-[194px] h-[53px] rounded-[10px]">
+              <Link href="/register" className="flex justify-center items-center font-sans font-bold text-sm text-[#fff] !bg-[#1B1F3B] w-[194px] h-[53px] rounded-[10px]">
                 Get Started Free
               </Link>
-              <Link href="/sign-up" className="flex justify-center items-center font-sans font-bold text-sm text-[#1B1F3B] bg-[#fff] w-[194px] h-[53px] border-1 border-[#1B1F3B] rounded-[10px]">
+              <Link href="/register" className="flex justify-center items-center font-sans font-bold text-sm text-[#1B1F3B] bg-[#fff] w-[194px] h-[53px] border-1 border-[#1B1F3B] rounded-[10px]">
                 Get Started Free
               </Link>
             </div>
