@@ -19,7 +19,16 @@ const Register = ()=>{
                         <FormInput label="Email Address" type="email" placeholder="Email Address" name="email address" />
                         <FormNumber label="Phone number" value="+2348069573501" onChange={()=>{console.log("hello")}} />
                         <FormInput label="Create password" type="password" placeholder="******" name="password" />
+                        <div className="font-sans font-normal text-[#CCCCCC] text-xs/6 mt-[-12px] mb-[20px] ">
+                            <p>Password must contain a minimum of 8 characters</p>
+                            <p>Password must contain at least one symbol e.g. @, !</p>
+                        </div>
                         <FormInput label="Location(optional)" type="text" placeholder="select location" name="location" />
+                         <button type="submit" className="bg-[#1B1F3B] text-[#fff] w-[400px] h-[40px] rounded-[5px]">Sign Up</button>
+                         <div className="flex mt-5">
+                            <p className="font-sans font-bold text-base text-[#C4C4C4]">Already a user?</p>
+                            <p className="font-sans font-bold text-base underline text-[#1B1F3B] ml-3">Login</p>
+                         </div>
                     </div>
                     
                 </form>
