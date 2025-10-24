@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { MdArrowBackIosNew } from "react-icons/md";
 import FormInput from "@/components/FormInput/FormInput";
@@ -16,7 +17,7 @@ const Register = ()=>{
                     <div className="w-[400px]">
                         <FormInput label="Full name" type="text" placeholder="Enter name" name="Full name" />
                         <FormInput label="Email Address" type="email" placeholder="Email Address" name="email address" />
-                        <FormNumber label="Phone number" name="phone number" value="+2348069573501" onChange={()=>{console.log("hello")}} />
+                        <FormNumber label="Phone number" value="+2348069573501" onChange={()=>{console.log("hello")}} />
                         <FormInput label="Create password" type="password" placeholder="******" name="password" />
                         <FormInput label="Location(optional)" type="text" placeholder="select location" name="location" />
                     </div>

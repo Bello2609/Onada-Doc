@@ -1,33 +1,37 @@
 // import React from "react";
-import PhoneInput from 'react-phone-number-input';
-import 'react-phone-number-input/style.css';
+import { PhoneInput, CountrySelector } from 'react-international-phone';
+import 'react-international-phone/style.css';
 type FormNumber = {
     label: string,
-    name: string,
     value: string,
     onChange: ()=> void
 }
-const FormNumber = ({ label, name, value, onChange }: FormNumber)=>{
+const FormNumber = ({ label, value, onChange }: FormNumber)=>{
     // const [value, setValue] = useState()
     return(
         <>
-            <div className="flex flex-col gap-5 w-full mt-3">
+            <div className="flex flex-col gap-5 w-full mt-3 mb-7">
                 <div className="flex">
-                <label className="font-medium text-[#252524]">{label}</label>
+                <label className="font-medium text-[#252524] mb-[-10px]">{label}</label>
                 </div>
-                <div className="flex border-solid rounded-lg border border-[#DFDFDF]  h-11 w-full p-2">
+                {/* <div className="flex border-solid rounded-lg border border-[#DFDFDF]  h-11 w-full p-2"> */}
                     <PhoneInput
-                        style={{
-                            outline: "none",
-                            border: "none",
-                            height: "100%"
-                        }}
+                        // inputStyle={{
+                        //     outline: "none",
+                        //     border: "none",
+                        //     height: "100%",
+                        //     width: "100%"
+                        // }}
+                        inputClassName='!w-full !h-[44px]'
+                        className='!w-[400px] !h-[44px] !rounded-lg'
                         value={value}
-                        defaultCountry="NG"
+                        defaultCountry={"ng"}
                         onChange={onChange}
-                        name={name} 
+                        countrySelectorStyleProps={{
+                            buttonClassName: "!h-[44px]"
+                        }}
                         />
-                </div>
+                {/* </div> */}
             </div>
          </>
     );
