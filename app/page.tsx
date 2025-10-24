@@ -125,7 +125,7 @@ const Home =()=> {
         </div>
         {/* banner ended */}
         {/* our features started */}
-        <div className="flex flex-col items-center px-16 font-semibold text-4xl bg-[#183B560D] py-10">
+        <div id="features" className="flex flex-col items-center px-16 font-semibold text-4xl bg-[#183B560D] py-10">
           <h4 className="text-[#1B1F3B]">Our Features</h4>
           <div className="grid grid-cols-3 gap-16 w-fit mt-10">
             <div className="flex flex-col items-center w-[300px] h-[248px] rounded-[20px] bg-[#fff] p-5 shadow-xl shadow-[#1B1F3B]/25">
@@ -169,7 +169,7 @@ const Home =()=> {
         </div>
         {/* our features ends */}
         {/* offer started */}
-        <div className="flex flex-col items-center bg-[#183B560D] py-16">
+        <div id="pricing" className="flex flex-col items-center bg-[#183B560D] py-16">
           <div className="flex flex-col items-center text-center">
             <p className={`${worksans.className} font-semibold flex-wrap text-4xl text-[#1B1F3B] w-[648px]`}>We offer great <span className="text-[#FFC700]">price</span> plan for the OnadaDocs</p>
           </div>
@@ -221,7 +221,7 @@ const Home =()=> {
         </div>
         {/* offers ended */}
         {/* what our client are saying start */}
-        <div className="flex flex-col items-center bg-[#183B560D] py-16">
+        <div id="testimony" className="flex flex-col items-center bg-[#183B560D] py-16">
           <p className="font-sans font-semibold text-4xl">What Our Clients Say About Us</p>
           <div className="flex cursor-pointer ">
             <p className="text-4xl text-[#525252]"><MdOutlineKeyboardArrowLeft /></p>

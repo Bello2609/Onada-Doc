@@ -12,7 +12,7 @@ const Navbar = ()=>{
             <div className={`flex justify-between items-center px-16  ${worksans.className}`}>
                 <Image src="/onada.png" alt="onada docs" width={104} height={104} />
                 <nav className="flex justify-evenly font-sans font-medium text-sm text-[#000] w-[500px]">
-                    <Link href="#home">Home</Link>
+                    <Link href="/">Home</Link>
                     <Link href="#features">Features</Link>
                     <Link href="#pricing">Pricing Plans</Link>
                     <Link href="#testimony">Testimonial</Link>
